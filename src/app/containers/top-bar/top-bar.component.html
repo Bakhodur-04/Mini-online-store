@@ -1,0 +1,25 @@
+<header class="header">
+    <div class="container">
+        <nav class="nav">
+            <ul class="list">
+                <li class="item">
+                    <a 
+                        routerLink="/" 
+                        routerLinkActive="router-link-active"
+                        [routerLinkActiveOptions]="{exact: true}"
+                        class="home"
+                    >Главная</a>
+                </li>
+
+                <li class="item">
+                    <a 
+                        routerLink="/catalog"
+                        routerLinkActive="router-link-active"
+                        [queryParams]="{filter: btnFilter}"
+                        class="home"
+                    >Каталог</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

@@ -1,0 +1,20 @@
+<div class="cart">
+    <button class="btn-cart"
+        (click)="cartService.getCount() > 0 ? openMenu() : ''"
+    >К</button>
+    
+    <app-badge 
+        class="cart-badge" 
+        [countThings]="cartService.getCount()"
+        [ngClass]="{
+            'cart-display-none': !cartService.getCount()
+        }"
+    ></app-badge>
+
+    <div class="dropdown">
+        <app-dropdown 
+            *ngIf="isOpen"
+            (close)="openMenu()"
+        ></app-dropdown>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+.mini-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-things {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .item-things {
+        margin-bottom: 20px;
+    }
+}

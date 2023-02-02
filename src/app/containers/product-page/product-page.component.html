@@ -1,0 +1,13 @@
+<h1>Товар {{ productId }}</h1>
+
+<div class="item">
+    <div class="item-thing">
+        <img class="img-thing" [src]="catalogService.product.pictureAddress" [alt]="catalogService.product.header">
+
+        <p class="info-thing">
+            <span>Название: {{ catalogService.product.header }}</span>
+            <span>Рейтинг: {{ catalogService.product.rating }}</span>
+            <span>Цена: {{ catalogService.product.price | currency:'RUB'}}</span>
+        </p>
+    </div>
+</div>

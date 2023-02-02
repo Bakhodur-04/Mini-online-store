@@ -1,0 +1,20 @@
+:host {
+    padding-bottom: 0;
+}
+
+.toggle {
+    padding-bottom: 20px;
+
+    .list-btn {
+        display: flex;
+    }
+
+    app-button .button--active {
+        background-color: #cecece;
+        border-color: #cecece;
+    }
+
+    .btn-toggle {
+        margin-right: 20px;
+    }
+}

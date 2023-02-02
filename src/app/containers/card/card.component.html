@@ -1,0 +1,13 @@
+<div class="item">
+    <div class="item-thing" [routerLink]="['/catalog', product.id]">
+        <img class="img-thing" [src]="product.pictureAddress" [alt]="product.header">
+
+        <p class="info-thing">
+            <span>Название: {{product.header}}</span>
+            <span>Рейтинг: {{product.rating}}</span>
+            <span>Цена: {{product.price | currency:'RUB'}}</span>
+        </p>
+    </div>
+
+    <app-button (click)="addCart(product)" [title]="'Добавить в корзину'"></app-button> 
+</div>

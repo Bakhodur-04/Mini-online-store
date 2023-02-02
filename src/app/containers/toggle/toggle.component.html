@@ -1,0 +1,15 @@
+<div class="toggle" >
+    <ul class="list-btn">
+        <li class="item-btn" *ngFor="let button of buttonDatas">
+            <app-button 
+                [color]="newFilterBtnActive == button.value ? 'primary' : 'default'"
+                [isDisabled]="newFilterBtnActive == button.value || params['filter'] == button.value"
+                [value]="button.value"
+                class="btn-toggle"
+                [title]="button.label" 
+                (click)="changed(button.value)" 
+                *ngIf="button.label != ''"
+            ></app-button>
+        </li>
+    </ul>
+</div>

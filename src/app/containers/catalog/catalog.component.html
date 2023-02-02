@@ -1,0 +1,19 @@
+<div class="mini-header">
+    <app-toggle 
+        (btnFilterValue)="catalogService.getProducts($event)" 
+        [newFilterBtnActive]="catalogService.newFilterBtnActive"
+    ></app-toggle>
+    
+    <app-cart 
+        class="cart"
+    ></app-cart>
+</div>
+    
+<ul class="list-things">
+    <li *ngFor="let product of catalogService.filteredProducts; let i = index" class="item-things">
+        <app-card
+            [product]="catalogService.filteredProducts[i]" 
+            (cartProduct)="cartService.addProduct($event)"
+        ></app-card>
+    </li>
+</ul>

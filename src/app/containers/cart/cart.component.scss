@@ -1,0 +1,55 @@
+:host {
+    position: relative;
+}
+
+.btn-cart {
+    background-image: url(./cart-svgrepo-com.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    
+    padding: 12px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in, border-color 0.2s ease-in;
+    background-color: #fff;
+
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.2s ease-in; 
+
+    &:hover {
+        background-color: #dddddd;
+    }
+
+    &:active {
+        background-color: #cecece;
+        border-color: #cecece;
+    }
+
+    &.button--active {
+        background-color: #cecece;
+        border-color: #cecece;
+    }
+}
+
+.cart-badge {
+    position: absolute;
+    top: 30px;
+    left: -15px;
+}
+
+.cart-display-none {
+    display: none;
+}
+
+.dropdown {
+    position: relative;
+  
+    app-dropdown {
+      position: absolute;
+      padding-top: 10px;
+      right: 0;
+    }
+}
